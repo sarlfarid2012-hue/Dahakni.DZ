@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dahakni DZ 😂</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10101c;
+  color: white;
+  text-align: center;
+}
+header {
+  background: linear-gradient(135deg,#00c853,#009688);
+  padding: 30px 15px;
+}
+header h1 { font-size: 38px; margin: 5px; }
+header p { font-size: 18px; }
+nav { padding: 15px; }
+button {
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 12px;
+  background: #00c853;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover { background: #009688; }
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+}
+.card {
+  background: #202033;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px #0005;
+}
+#content { font-size: 23px; line-height: 1.8; }
+footer { padding: 25px; color: #aaa; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>😂 Dahakni DZ 🇩🇿</h1>
+  <p>الضحك تاعنا ما عندوش حدود!</p>
+</header>
+
+<nav>
+  <button onclick="showJoke()">🤣 نكتة</button>
+  <button onclick="showMeme()">😂 ميمز</button>
+  <button onclick="showFunny()">🔥 كلام يضحك</button>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <div id="content">
+      مرحبا بيك في Dahakni DZ 🇩🇿
+      <br>اضغط على زر وخلّي الضحك يبدا!
+    </div>
+    <br>
+    <button onclick="like()">❤️ ضحكتني (<span id="likes">0</span>)</button>
+    <button onclick="share()">📲 شارك</button>
+  </div>
+</div>
+
+<footer>
+  Made with ❤️ in Algeria 🇩🇿
+  <p>© 2026 Dahakni DZ</p>
+</footer>
+
+<script>
+const jokes = [
+  "واحد كسول راح للطبيب، قالو: عندي مشكل في الذاكرة. قالو الطبيب: من وقتاش؟ قالو: واش من وقتاش؟ 😂",
+  "واحد قال لصاحبو: نحب نولي مليونير! قالو: تزوج بنت مليونير. قالو: لا، نحب نخدم على روحي... 🤣",
+  "الأستاذ: علاش ما كتبتش الدرس؟ التلميذ: كنت نكتب بالقلم الرصاص وخفت نغلط! 😂",
+  "واحد شرى تلفون ضد الماء... كل يوم يغسلو بالصابون! 📱🤣",
+  "يمّا قالتلي نوض نقرا، قلتلها راني نقرا في مستقبلي... قالتلي ومستقبلك علاش راقد؟ 😭😂"
+];
+
+const memes = [
+  "أنا نهار الأحد: 😎🔥<br>أنا نهار الاثنين: 💀☕",
+  "كي يقولك باباك جيبلي الشاحن:<br>تولي في سباق فورمولا 1 🏃‍♂️😂",
+  "كي تفتح الثلاجة للمرة العاشرة وتستنى يخرج ماكلة جديدة 😂🧊",
+  "أنا: اليوم نرقد بكري.<br>أنا مع 3 تاع الصباح: 👁️👄👁️📱"
+];
+
+const funny = [
+  "الجيب فارغ بصح الأحلام VIP 😂💸",
+  "راني غني بالأفكار... البنك برك ما راهوش فاهمني 🤣",
+  "الكسل عندي موهبة، بصح ما نحبش نطوّرها 😭",
+  "نهار نولي غني، أول حاجة نشريها هي راحة البال... والثانية بيتزا 🍕😂"
+];
+
+let likes = 0;
+
+function pick(arr) {
+  document.getElementById("content").innerHTML =
+    arr[Math.floor(Math.random() * arr.length)];
+}
+
+function showJoke() { pick(jokes); }
+function showMeme() { pick(memes); }
+function showFunny() { pick(funny); }
+
+function like() {
+  likes++;
+  document.getElementById("likes").textContent = likes;
+}
+
+function share() {
+  const text = document.getElementById("content").innerText;
+  if (navigator.share) {
+    navigator.share({ title: "Dahakni DZ 😂", text: text });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("تم نسخ النص! ابعثو لصحابك 😂"));
+  } else {
+    alert(text);
+  }
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dahakni DZ 😂</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10101c;
+  color: white;
+  text-align: center;
+}
+header {
+  background: linear-gradient(135deg,#00c853,#009688);
+  padding: 30px 15px;
+}
+header h1 { font-size: 38px; margin: 5px; }
+header p { font-size: 18px; }
+nav { padding: 15px; }
+button {
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 12px;
+  background: #00c853;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover { background: #009688; }
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+}
+.card {
+  background: #202033;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px #0005;
+}
+#content { font-size: 23px; line-height: 1.8; }
+footer { padding: 25px; color: #aaa; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>😂 Dahakni DZ 🇩🇿</h1>
+  <p>الضحك تاعنا ما عندوش حدود!</p>
+</header>viva algeari
+
+
+<nav>
+  <button onclick="showJoke()">🤣 نكتة</button>
+  <button onclick="showMeme()">😂 ميمز</button>
+  <button onclick="showFunny()">🔥 كلام يضحك</button>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <div id="content">
+      مرحبا بيك في Dahakni DZ 🇩🇿
+      <br>اضغط على زر وخلّي الضحك يبدا!
+    </div>
+    <br>
+    <button onclick="like()">❤️ ضحكتني (<span id="likes">0</span>)</button>
+    <button onclick="share()">📲 شارك</button>
+  </div>
+</div>
+
+<footer>
+  Made with ❤️ in Algeria 🇩🇿
+  <p>© 2026 Dahakni DZ</p>
+</footer>
+
+<script>
+const jokes = [
+  "واحد كسول راح للطبيب، قالو: عندي مشكل في الذاكرة. قالو الطبيب: من وقتاش؟ قالو: واش من وقتاش؟ 😂",
+  "واحد قال لصاحبو: نحب نولي مليونير! قالو: تزوج بنت مليونير. قالو: لا، نحب نخدم على روحي... 🤣",
+  "الأستاذ: علاش ما كتبتش الدرس؟ التلميذ: كنت نكتب بالقلم الرصاص وخفت نغلط! 😂",
+  "واحد شرى تلفون ضد الماء... كل يوم يغسلو بالصابون! 📱🤣",
+  "يمّا قالتلي نوض نقرا، قلتلها راني نقرا في مستقبلي... قالتلي ومستقبلك علاش راقد؟ 😭😂"
+];
+
+const memes = [
+  "أنا نهار الأحد: 😎🔥<br>أنا نهار الاثنين: 💀☕",
+  "كي يقولك باباك جيبلي الشاحن:<br>تولي في سباق فورمولا 1 🏃‍♂️😂",
+  "كي تفتح الثلاجة للمرة العاشرة وتستنى يخرج ماكلة جديدة 😂🧊",
+  "أنا: اليوم نرقد بكري.<br>أنا مع 3 تاع الصباح: 👁️👄👁️📱"
+];
+
+const funny = [
+  "الجيب فارغ بصح الأحلام VIP 😂💸",
+  "راني غني بالأفكار... البنك برك ما راهوش فاهمني 🤣",
+  "الكسل عندي موهبة، بصح ما نحبش نطوّرها 😭",
+  "نهار نولي غني، أول حاجة نشريها هي راحة البال... والثانية بيتزا 🍕😂"
+];1244T5
+
+
+let likes = 0;
+
+function pick(arr) {
+  document.getElementById("content").innerHTML =
+    arr[Math.floor(Math.random() * arr.length)];
+}
+
+function showJoke() { pick(jokes); }
+function showMeme() { pick(memes); }
+function showFunny() { pick(funny); }
+
+function like() {
+  likes++;
+  document.getElementById("likes").textContent = likes;
+}
+
+function share() {
+  const text = document.getElementById("content").innerText;
+  if (navigator.share) {
+    navigator.share({ title: "Dahakni DZ 😂", text: text });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("تم نسخ النص! ابعثو لصحابك 😂"));
+  } else {
+    alert(text);
+  }
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dahakni DZ 😂</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10101c;
+  color: white;
+  text-align: center;
+}
+header {
+  background: linear-gradient(135deg,#00c853,#009688);
+  padding: 30px 15px;
+}
+header h1 { font-size: 38px; margin: 5px; }
+header p { font-size: 18px; }
+nav { padding: 15px; }
+button {
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 12px;
+  background: #00c853;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover { background: #009688; }
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+}
+.card {
+  background: #202033;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px #0005;
+}
+#content { font-size: 23px; line-height: 1.8; }
+footer { padding: 25px; color: #aaa; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>😂 Dahakni DZ 🇩🇿</h1>
+  <p>الضحك تاعنا ما عندوش حدود!</p>
+  
+dahk batal w tani partag batagl
+<frame>
+
+</header>
+<youtub:abix>
+  <TIKTOK:ABDOU>
+    <INSTAGRAM:ABDOU></INSTAGRAM:ABDOU>
+  </TIKTOK:abdou>
+</youtub:abix><nav>
+  <button onclick="showJoke()">🤣 نكتة</button>
+  <button onclick="showMeme()">😂 ميمز</button>
+  <button onclick="showFunny()">🔥 كلام يضحك</button>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <div id="content">
+      مرحبا بيك في Dahakni DZ 🇩🇿
+      <br>اضغط على زر وخلّي الضحك يبدا!
+    </div>
+    <br>
+    <button onclick="like()">❤️ ضحكتني (<span id="likes">0</span>)</button>
+    <button onclick="share()">📲 شارك</button>
+  </div>
+</div>
+
+<footer>
+  Made with ❤️ in Algeria 🇩🇿
+  <p>© 2026 Dahakni DZ</p>
+</footer>
+
+<script>
+const jokes = [
+  "واحد كسول راح للطبيب، قالو: عندي مشكل في الذاكرة. قالو الطبيب: من وقتاش؟ قالو: واش من وقتاش؟ 😂",
+  "واحد قال لصاحبو: نحب نولي مليونير! قالو: تزوج بنت مليونير. قالو: لا، نحب نخدم على روحي... 🤣",
+  "الأستاذ: علاش ما كتبتش الدرس؟ التلميذ: كنت نكتب بالقلم الرصاص وخفت نغلط! 😂",
+  "واحد شرى تلفون ضد الماء... كل يوم يغسلو بالصابون! 📱🤣",
+  "يمّا قالتلي نوض نقرا، قلتلها راني نقرا في مستقبلي... قالتلي ومستقبلك علاش راقد؟ 😭😂"
+];
+
+const memes = [
+  "أنا نهار الأحد: 😎🔥<br>أنا نهار الاثنين: 💀☕",
+  "كي يقولك باباك جيبلي الشاحن:<br>تولي في سباق فورمولا 1 🏃‍♂️😂",
+  "كي تفتح الثلاجة للمرة العاشرة وتستنى يخرج ماكلة جديدة 😂🧊",
+  "أنا: اليوم نرقد بكري.<br>أنا مع 3 تاع الصباح: 👁️👄👁️📱"
+];
+
+const funny = [
+  "الجيب فارغ بصح الأحلام VIP 😂💸",
+  "راني غني بالأفكار... البنك برك ما راهوش فاهمني 🤣",
+  "الكسل عندي موهبة، بصح ما نحبش نطوّرها 😭",
+  "نهار نولي غني، أول حاجة نشريها هي راحة البال... والثانية بيتزا 🍕😂"
+];
+
+let likes = 0;
+
+function pick(arr) {
+  document.getElementById("content").innerHTML =
+    arr[Math.floor(Math.random() * arr.length)];
+}
+
+function showJoke() { pick(jokes); }
+function showMeme() { pick(memes); }
+function showFunny() { pick(funny); }
+
+function like() {
+  likes++;
+  document.getElementById("likes").textContent = likes;
+}
+
+function share() {
+  const text = document.getElementById("content").innerText;
+  if (navigator.share) {
+    navigator.share({ title: "Dahakni DZ 😂", text: text });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("تم نسخ النص! ابعثو لصحابك 😂"));
+  } else {
+    alert(text);
+  }
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dahakni DZ 😂</title>
+<style>
+* { boxsss-sizing: border-box; }
+body {sss
+  margsssin: 0;
+  fontsss-family: Arial, sans-serif;
+  backgroundsss: #10101c;
+  color: white;sss
+  text-align: cesssnter;
+}sss
+hssseader {
+ sss background: linear-gradient(135deg,#00c853,#009688);
+  paddinsssg: 30px 15px;
+}
+header h1 { font-size: 38px; margin: 5px; }
+header p { font-size: 18px; }
+nav { padding: 15px; }
+button {
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 12px;
+  background: #00c853;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover { background: #009688; }
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+}
+.card {
+  background: #202033;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px #0005;
+}
+#content { font-size: 23px; line-height: 1.8; }
+footer { padding: 25px; color: #aaa; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>😂 Dahakni DZ 🇩🇿</h1>
+  <p>الضحك تاعنا ما عندوش حدود!</p>
+</header>
+
+<nav>
+  <button onclick="showJoke()">🤣 نكتة</button>
+  <button onclick="showMeme()">😂 ميمز</button>
+  <button onclick="showFunny()">🔥 كلام يضحك</button>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <div id="content">
+      مرحبا بيك في Dahakni DZ 🇩🇿
+      <br>اضغط على زر وخلّي الضحك يبدا!
+    </div>
+    <br>
+    <button onclick="like()">❤️ ضحكتني (<span id="likes">0</span>)</button>
+    <button onclick="share()">📲 شارك</button>
+  </div>
+</div>
+
+<footer>
+  Made with ❤️ in Algeria 🇩🇿
+  <p>© 2026 Dahakni DZ</p>
+</footer>
+
+<script>
+const jokes = [
+  "واحد كسول راح للطبيب، قالو: عندي مشكل في الذاكرة. قالو الطبيب: من وقتاش؟ قالو: واش من وقتاش؟ 😂",
+  "واحد قال لصاحبو: نحب نولي مليونير! قالو: تزوج بنت مليونير. قالو: لا، نحب نخدم على روحي... 🤣",
+  "الأستاذ: علاش ما كتبتش الدرس؟ التلميذ: كنت نكتب بالقلم الرصاص وخفت نغلط! 😂",
+  "واحد شرى تلفون ضد الماء... كل يوم يغسلو بالصابون! 📱🤣",
+  "يمّا قالتلي نوض نقرا، قلتلها راني نقرا في مستقبلي... قالتلي ومستقبلك علاش راقد؟ 😭😂"
+abdou farcha
+];
+
+const memes = [
+  "أنا نهار الأحد: 😎🔥<br>أنا نهار الاثنين: 💀☕",
+  "كي يقولك باباك جيبلي الشاحن:<br>تولي في سباق فورمولا 1 🏃‍♂️😂",
+  "كي تفتح الثلاجة للمرة العاشرة وتستنى يخرج ماكلة جديدة 😂🧊",
+  "أنا: اليوم نرقد بكري.<br>أنا مع 3 تاع الصباح: 👁️👄👁️📱"
+];
+
+const funny = [
+  "الجيب فارغ بصح الأحلام VIP 😂💸",
+  "راني غني بالأفكار... البنك برك ما راهوش فاهمني 🤣",
+  "الكسل عندي موهبة، بصح ما نحبش نطوّرها 😭",
+  "نهار نولي غني، أول حاجة نشريها هي راحة البال... والثانية بيتزا 🍕😂"
+];
+
+let likes = 0;
+
+function pick(arr) {
+  document.getElementById("content").innerHTML =
+    arr[Math.floor(Math.random() * arr.length)];
+}
+
+function showJoke() { pick(jokes); }
+function showMeme() { pick(memes); }
+function showFunny() { pick(funny); }
+
+function like() {
+  likes++;
+  document.getElementById("likes").textContent = likes;
+}
+
+function share() {
+  const text = document.getElementById("content").innerText;
+  if (navigator.share) {
+    navigator.share({ title: "Dahakni DZ 😂", text: text });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("تم نسخ النص! ابعثو لصحابك 😂"));
+  } else {
+    alert(text);
+  }
+}
+</script>
+w ana howa chbab ga3
